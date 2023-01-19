@@ -1,0 +1,212 @@
+body {
+  background-color: #121f3d;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto';
+  color: #EFF3F8;
+}
+
+h1 {
+  font-weight: 1000;
+  font-family: 'Roboto Flex', sans-serif;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.nav {
+  width: 100%;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px;
+}
+
+.nav img {
+  width: auto;
+  max-height: 40px;
+}
+
+.content {
+  padding: 0 16px 32px 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.general {
+  text-decoration: none;
+  display: none;
+  align-items: center;
+  justify-content: space-between;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: top;
+  margin: 0 -16px 0 -16px;
+  padding: 0 16px;
+  background-image: url(https://static.platzi.com/media/uploads/thumbnail_school_bg_marketing_2x_a501fe11b8.png);
+  border: 1px solid #24385b ;
+}
+
+.chevron {
+  transform: rotate(-90deg);
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.tag img {
+  width: 12px;
+  height: 12px;
+  object-fit: contain;
+  margin-right: 6px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tag {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  margin: 2px;
+  border-radius: 12px;
+  background-color: #121F3D;
+  font-size: 12px;
+}
+
+.tag p {
+  margin: 4px 6px;
+  line-height: 1;
+}
+
+.checked {
+  border: 1px solid #77A61E;
+  background: #425C3D;
+}
+
+.checked p {
+  margin: 4px 4px 4px 6px;
+}
+
+.recommendations a {
+  display: flex;
+  position: relative;
+  padding: 15px 12px;
+  width: 100%;
+  align-items: center;
+  text-decoration: none;
+  border-top: 1px solid #637A9D;
+}
+
+.recommendations img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  margin-right: 12px;
+}
+
+.recommendations .courseText .courseTitle {
+  margin: 0 0 4px 0;
+}
+
+.recommendations .arrow {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}
+
+.card {
+  border-radius: 8px;
+  border: 1px solid #24385B;
+  box-shadow: 0px 4px 8px rgba(12, 22, 51, 0.6);
+  margin: 20px 0;
+}
+
+.top {
+  padding: 20px 20px 6px 20px;
+}
+
+.down {
+  background: #24385B;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.matching {
+  display: flex;
+  align-items: center;
+  margin: 12px 16px;
+}
+
+.matching p {
+  margin-bottom: 0;
+}
+
+.match {
+  margin-left: 4px;
+  color: #98CA3F;
+}
+
+.tags {
+  margin: 0 16px;
+}
+
+.recommendationsTitle {
+  margin: 16px;
+}
+
+.courseText .tags {
+  margin: 0;
+}
+
+h2 {
+  font-size: 20px;
+  margin: 0 0 4px 0;
+  font-weight: 600;
+}
+
+.hero p {
+  font-size: 14px;
+  margin: 0;
+}
+
+.head p {
+  margin: 0;
+  color: #8DA2C0;
+  font-weight: 400;
+  font-size: 12px;
+}
+
+.jobDescription {
+  color: #8DA2C0;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.bottom p {
+  margin: 0;
+  font-size: 14px;
+}
+
+.bottom a {
+  text-decoration: none;
+  color: #33B1FF;
+  font-size: 14px;
+}
