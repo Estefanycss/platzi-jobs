@@ -2,37 +2,79 @@ fetch('https://pokeapi.co/api/v2/pokemon-species/')
   .then(response => response.json())
   .then(data => {
     let container = document.getElementById("jobs");
-    for (let index = 0; index < data.results.length; index++) {
-      const element = {
-        title: "UI Engineer",
-        company: "Slack",
-        location: "Bogotá",
+
+    const mock = [
+      {
+        title: "Full-Stack Python + React",
+        company: "Orpheus",
+        location: "España",
         modality: "Remoto",
-        description: "This Front End Developer will manage local standalone applications for market initiatives which will in turn improve performance of the Nespresso US eCommerce responsive site",
-        salary: "$1k - $5k USD mensuales",
-        linkToJob: "#",
-        coincidence: "95",
+        description: "Apoyar al CTO en los desarrollos necesarios para levantar la siguiente ronda, prevista para septiembre del 2023. Uno de los hitos del rol es el uso de sistemas de IA ofrecidos por proveedores cloud, como AWS o Google, para el sistema de control de edificios",
+        salary: "$3000 - 4000 USD mensuales",
+        linkToJob: "https://jobs.platzi.com/companies/orpheus",
+        coincidence: "65",
         skills: [
           { name: "React", checked: true },
-          { name: "HTML", checked: true },
-          { name: "CSS", checked: true },
-          { name: "Ingles", checked: false },
+          { name: "Devops", checked: true },
+          { name: "Docker", checked: true },
+          { name: "Django", checked: false },
+          { name: "English", checked: false },
         ],
         recommendations: [
           {
-            badge: "https://static.platzi.com/media/achievements/badge-mongo-db-5f684168-798f-42ad-a17c-2e8f0c40a477.png",
-            title: "Curso de inglés laboral",
-            skill: { name: "Ingles", checked: false },
-            link: "www.google.com",
+            badge: "https://static.platzi.com/cdn-cgi/image/width=1024,quality=50,format=auto/media/achievements/piezas-django-intermedio-testing-static-files-django-admin_badge-354a5d94-cd66-4a58.png",
+            title: "Curso de Django Intermedio: Testing, Static Files, Django Admin",
+            skill: { name: "Django", checked: false },
+            link: "https://platzi.com/cursos/django-intermedio/",
           },
           {
-            badge: "https://static.platzi.com/media/achievements/badge-mongo-db-5f684168-798f-42ad-a17c-2e8f0c40a477.png",
-            title: "Curso de inglés laboral",
-            skill: { name: "Ingles", checked: false },
-            link: "www.google.com",
+            badge: "https://static.platzi.com/cdn-cgi/image/width=1024,quality=50,format=auto/media/achievements/ingles-avanzado-c1-habilidades-comunicacion-discurso-persuasivo-badge-cfd7af0d-0fe2.png",
+            title: "Curso de Inglés Avanzado C1: Habilidades de Comunicación y Discurso Persuasivo",
+            skill: { name: "English", checked: false },
+            link: "https://platzi.com/cursos/habilidades-comunicacion/",
           }
         ],
-      };
+      },
+      {
+        title: "Mid Python Developer",
+        company: "Awana",
+        location: "Mexico",
+        modality: "Remoto",
+        description: "Develop backend solutions in Python together with the backend team using the Scrum methodology. The developer must deliver clean code solutions following the company's guidelines.",
+        salary: "$3,500 USD mensuales",
+        linkToJob: "https://jobs.platzi.com/companies/awana",
+        coincidence: "85",
+        skills: [
+          { name: "Unit testing", checked: true },
+          { name: "Cloud services", checked: true },
+          { name: "Scrum", checked: false },
+          { name: "Django", checked: false },
+          { name: "English", checked: false },
+        ],
+        recommendations: [
+          {
+            badge: "https://static.platzi.com/cdn-cgi/image/width=1024,quality=50,format=auto/media/achievements/badges-scrum-9aaa566f-eb7c-4676-9e55-d36565ec582e.png",
+            title: "Curso Profesional de Scrum",
+            skill: { name: "Scrum", checked: false },
+            link: "https://platzi.com/cursos/scrum/",
+          },
+          {
+            badge: "https://static.platzi.com/cdn-cgi/image/width=1024,quality=50,format=auto/media/achievements/piezas-django-intermedio-testing-static-files-django-admin_badge-354a5d94-cd66-4a58.png",
+            title: "Curso de Django Intermedio: Testing, Static Files, Django Admin",
+            skill: { name: "Django", checked: false },
+            link: "https://platzi.com/cursos/django-intermedio/",
+          },
+          {
+            badge: "https://static.platzi.com/cdn-cgi/image/width=1024,quality=50,format=auto/media/achievements/ingles-avanzado-c1-habilidades-comunicacion-discurso-persuasivo-badge-cfd7af0d-0fe2.png",
+            title: "Curso de Inglés Avanzado C1: Habilidades de Comunicación y Discurso Persuasivo",
+            skill: { name: "English", checked: false },
+            link: "https://platzi.com/cursos/habilidades-comunicacion/",
+          }
+        ],
+      }];
+
+    for (let index = 0; index < mock.length; index++) {
+      const element = mock[index];
 
       let cardNode = document.createElement("div");
       let topNode = document.createElement("div");
@@ -81,7 +123,7 @@ fetch('https://pokeapi.co/api/v2/pokemon-species/')
       cardNode.append(downNode);
 
       let textNode = document.createElement("p");
-      let text = document.createTextNode("Tu coincidencia con el trabajo: ");
+      let text = document.createTextNode("Tu compatibilidad con la vacante: ");
       textNode.appendChild(text);
 
       let matchNode = document.createElement("p");
@@ -126,7 +168,7 @@ function showSkills(skills) {
     skillTextNode.appendChild(skillText);
     skillNode.appendChild(skillTextNode);
 
-    if(element.checked) {
+    if (element.checked) {
       skillNode.classList.add("checked");
       let check = new Image();
       check.src = "images/check.png";
